@@ -55,11 +55,11 @@
 </div>
 <div class="dicee">
     <div class="dice dice--1">
-        <img src="./images/dice6.png">
+        <img src="dice6.png">
         <p class="players">player 1</p>
     </div>
     <div class="dice dice--2">
-        <img src="./images/dice6.png">
+        <img src="dice6.png">
         <p class="players">player 2</p>
     </div>
 </div>
@@ -70,18 +70,16 @@
 var randomNumber=Math.floor(Math.random()*6+1);
 //to get random img
 var randomImage= "dice"+randomNumber+".png";
-//Setting path
-var RandomImagePath="./images/"+randomImage;
 
-var image1=document.querySelectorAll('img')[0].setAttribute("src",RandomImagePath);
+
+var image1=document.querySelectorAll('img')[0].setAttribute("src",RandomImage);
 
 //to get second random number
 var randomNumber1=Math.floor(Math.random()*6+1);
 //to get random img
 var randomImage1= "dice"+randomNumber1+".png";
-//Setting path
-var RandomImagePath1="./images/"+randomImage1;
-var image2=document.querySelectorAll('img')[1].setAttribute("src",RandomImagePath1);
+
+var image2=document.querySelectorAll('img')[1].setAttribute("src",RandomImage1);
 
 //if player1 wins
 if(randomNumber > randomNumber1){
