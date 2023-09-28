@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boss</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+<style>
+     *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+     }
+     .Heading{
+        color:#1dd1a1;
+        margin:30px;
+        font-family: 'Lobster', cursive;
+        text-shadow: 5px 0 #232931;
+        font-size: 50px;
+  
+     }
+    body{
+        background-color:#576574;
+    }
+    .container{
+        /* display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; */
+        width:60%;
+        margin:auto;
+        text-align: center;
+    }
+
+.dice{
+    display: inline-block;
+    text-align: center;
+    
+}
+    .players{
+        font-size: 2rem;
+        color: #4ECCA3;
+  font-family: 'Indie Flower', cursive;
+    }
+    img{
+        width:70%;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+<div class="Heading">
+    <h1>Refresh Me</h1>
+</div>
+<div class="dicee">
+    <div class="dice dice--1">
+        <img src="./images/dice6.png">
+        <p class="players">player 1</p>
+    </div>
+    <div class="dice dice--2">
+        <img src="./images/dice6.png">
+        <p class="players">player 2</p>
+    </div>
+</div>
+        
+    </div>
+    <script >
+        //to get randdom number
+var randomNumber=Math.floor(Math.random()*6+1);
+//to get random img
+var randomImage= "dice"+randomNumber+".png";
+//Setting path
+var RandomImagePath="./images/"+randomImage;
+
+var image1=document.querySelectorAll('img')[0].setAttribute("src",RandomImagePath);
+
+//to get second random number
+var randomNumber1=Math.floor(Math.random()*6+1);
+//to get random img
+var randomImage1= "dice"+randomNumber1+".png";
+//Setting path
+var RandomImagePath1="./images/"+randomImage1;
+var image2=document.querySelectorAll('img')[1].setAttribute("src",RandomImagePath1);
+
+//if player1 wins
+if(randomNumber > randomNumber1){
+    document.querySelector("h1").innerHTML="🚩Player 1 wins!!";
+} else if(randomNumber1 > randomNumber){
+    document.querySelector("h1").innerHTML="Player 2 wins!!🚩";
+} else{
+    document.querySelector("h1").innerHTML="🚩Draw🚩";
+}
+    </script>
+
+</body>
+</html>
